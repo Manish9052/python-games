@@ -1,0 +1,75 @@
+import turtle
+
+# Setup the turtle screen
+screen = turtle.Screen()
+screen.title("Spider-Man Drawing")
+screen.bgcolor("white")
+screen.setup(width=800, height=600)
+
+# Create the turtle
+pen = turtle.Turtle()
+pen.speed(2)
+pen.color("black")
+pen.pensize(3)
+
+# Draw Spider-Man's head
+pen.penup()
+pen.goto(0, -200)
+pen.pendown()
+pen.circle(200)
+
+# Draw Spider-Man's eyes
+pen.penup()
+pen.goto(-70, 50)
+pen.setheading(-30)
+pen.pendown()
+pen.circle(80, 180)
+pen.goto(-70, 50)
+pen.setheading(30)
+pen.circle(-80, 180)
+
+# Draw Spider-Man's web
+pen.penup()
+pen.goto(0, 200)
+pen.setheading(-90)
+pen.pendown()
+pen.forward(400)
+
+# Draw Spider-Man's body
+pen.penup()
+pen.goto(-100, -200)
+pen.setheading(-60)
+pen.pendown()
+pen.circle(80, 120)
+pen.setheading(60)
+pen.circle(-80, 120)
+
+# Draw Spider-Man's legs
+pen.penup()
+pen.goto(0, -200)
+pen.setheading(-120)
+pen.pendown()
+pen.forward(250)
+pen.setheading(-60)
+pen.forward(100)
+pen.setheading(60)
+pen.forward(100)
+pen.setheading(120)
+pen.forward(250)
+
+# Draw Spider-Man's web shooter
+pen.penup()
+pen.goto(100, 0)
+pen.pendown()
+pen.setheading(90)
+pen.forward(80)
+pen.left(120)
+pen.forward(30)
+pen.left(60)
+pen.forward(40)
+
+# Hide the turtle
+pen.hideturtle()
+
+# Exit on click
+turtle.done()
